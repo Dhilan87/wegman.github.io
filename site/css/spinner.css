@@ -1,0 +1,71 @@
+/* Input Spinner */
+input[type=number] {
+  float: left;
+  width: 40px;
+  height: 34px;
+  padding: 0;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000000;
+  border: 1px #979797 solid;
+  background: none;
+  outline: none;
+  pointer-events: none;
+}
+.spinner {
+  display: inline-block;
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+.spinner.disabled > .sub,
+.spinner.disabled > .add {
+    color: #979797;
+}
+.spinner > .sub,
+.spinner > .add {
+  float: left;
+  display: block;
+  width: 40px;
+  height: 34px;
+  text-align: center;
+  font-family: Lato;
+  font-weight: 700;
+  font-size: 1.2em;
+  line-height: 33px;
+  color: #2e2e2e;
+  cursor: pointer;
+  transition: 0.1s linear;
+  -o-transition: 0.1s linear;
+  -ms-transition: 0.1s linear;
+  -moz-transition: 0.1s linear;
+  -webkit-transition: 0.1s linear;
+}
+.spinner > .add {
+  top: 0;
+}
+.spinner > .sub:hover,
+.spinner > .add:hover {
+  color: #2a7ecd;
+}
+.spinner.disabled > .sub:hover,
+.spinner.disabled > .add:hover {
+  color: #979797;
+  cursor: default;
+}
+.spinner > .sub:focus,
+.spinner > .add:focus,
+.spinner > .sub:visited,
+.spinner > .add:visited {
+  color: #104477;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+ -webkit-appearance: none;
+}
+input[type=number] {
+    -moz-appearance:textfield;
+}

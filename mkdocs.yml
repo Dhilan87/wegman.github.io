@@ -1,0 +1,28 @@
+site_name: <img src="../img/logo.png" />
+theme: flatly
+extra_css:
+  - "css/custom-style.css"
+  - "css/site.css"
+  - "css/header.css"
+  - "css/grid.css"
+  - "css/breadcrumb.css"
+  - "css/button.css"
+  - "css/menu.css"
+  - "css/tab.css"
+  - "css/form.css"
+  - "css/input.css"
+  - "css/checkbox.css"
+  - "css/spinner.css"
+  - "css/wegman-custom.css"
+
+extra_javascript: 
+  - "js/jquery.address.js"
+  - "js/site.js"
+  - "js/api.js"
+  - "js/tab.js"
+  - "js/spinner.js"
+  - "js/checkbox.js"
+  - "js/custom.js"
+pages:
+  - 'Home': index.md
+  - 'Components' : 'components.md'
