@@ -1,0 +1,81 @@
+/*
+ * Author: Dhilan Patel & Utpal Paul
+ * Date: 22/03/2016
+ * Document: Wegman Custom Stylesheet File
+ * Version: 0.0.1
+ */
+ 
+/* font-family: 'Source Sans Pro', sans-serif; */ 
+/* font-family: 'Bad Script', cursive; */
+/* font-family: 'Archivo Narrow', sans-serif; */
+ 
+
+/*
+ * Color Palette
+ */
+ 
+.color-slate-gray {
+    background: #2F2F2F;
+}
+
+.color-slate-gray:hover {
+    background: #2F2F2F;  
+    opacity: 0.3; 
+}
+
+.color-slate-gray:active,
+.color-slate-gray:focus {
+    background: #2F2F2F;   
+    opacity: 0.5;
+}
+
+.color-grape {
+    background: #91268F;   
+}
+
+.color-pineapple {
+    background: #FFD200;
+}
+ 
+.color-tangerine {
+    background: #F7A53F;
+}
+
+.color-tangerine:hover {
+    background: #FFBD3F;   
+}
+
+.color-tangerine:active,
+.color-tangerine:focus {
+    background: #EA8D1A;   
+}
+
+.color-tomato {
+    background: #EE3123;   
+}
+
+.color-value-red {
+    background: #ED174F;
+}
+
+.color-blueberry {
+    background: #2263A0;   
+}
+
+.color-blueberry:hover {
+    background: #2A7FCE;   
+}
+
+.color-blueberry:active,
+.color-blueberry:focus {
+    background: #104578;   
+}
+
+.color-peapod {
+    background: #53B947;
+}
+
+.color-neutral {
+    background: #CCCCCC;   
+}
+

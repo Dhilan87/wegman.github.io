@@ -1,0 +1,854 @@
+/*!
+ * # Semantic UI 2.1.7 - Button
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Copyright 2015 Contributors
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+
+/*******************************
+            Button
+*******************************/
+
+.ui.button {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 2.125em;
+  outline: none;
+  border: none;
+  vertical-align: baseline;
+  background: #e0e1e2 none;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: 'Archivo Narrow', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  margin: 0em 0.25em 0em 0em;
+  padding: 0.715em 1.250em;
+  text-transform: none;
+  text-shadow: none;
+  font-weight: 700;
+  line-height: 1em;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.313em;
+  text-transform: uppercase;
+  box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+          transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+  will-change: '';
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/*******************************
+            States
+*******************************/
+
+
+/*--------------
+      Hover
+---------------*/
+
+.ui.button:hover {
+  background-color: #cacbcd;
+  background-image: none;
+  box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+  color: rgba(0, 0, 0, 0.8);
+}
+.ui.button:hover .icon {
+  opacity: 0.85;
+}
+
+/*--------------
+      Focus
+---------------*/
+
+.ui.button:focus {
+  background-color: #cacbcd;
+  color: rgba(0, 0, 0, 0.8);
+  background-image: '' !important;
+  box-shadow: '' !important;
+}
+.ui.button:focus .icon {
+  opacity: 0.85;
+}
+
+/*--------------
+      Down
+---------------*/
+
+.ui.button:active,
+.ui.active.button:active {
+  background-color: #babbbc;
+  background-image: '';
+  color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0px 0px 0px 1px transparent inset, none;
+}
+
+/*--------------
+     Active
+---------------*/
+
+.ui.active.button {
+  background-color: #c0c1c2;
+  background-image: none;
+  box-shadow: 0px 0px 0px 1px transparent inset;
+  color: rgba(0, 0, 0, 0.95);
+}
+.ui.active.button:hover {
+  background-color: #c0c1c2;
+  background-image: none;
+  color: rgba(0, 0, 0, 0.95);
+}
+.ui.active.button:active {
+  background-color: #c0c1c2;
+  background-image: none;
+}
+
+/*--------------
+    Loading
+---------------*/
+
+
+/* Specificity hack */
+.ui.loading.loading.loading.loading.loading.loading.button {
+  position: relative;
+  cursor: default;
+  text-shadow: none !important;
+  color: transparent !important;
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transition: all 0s linear, opacity 0.1s ease;
+          transition: all 0s linear, opacity 0.1s ease;
+}
+.ui.loading.button:before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  margin: -0.64285714em 0em 0em -0.64285714em;
+  width: 1.28571429em;
+  height: 1.28571429em;
+  border-radius: 500rem;
+  border: 0.2em solid rgba(0, 0, 0, 0.15);
+}
+.ui.loading.button:after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  margin: -0.64285714em 0em 0em -0.64285714em;
+  width: 1.28571429em;
+  height: 1.28571429em;
+  -webkit-animation: button-spin 0.6s linear;
+          animation: button-spin 0.6s linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  border-radius: 500rem;
+  border-color: #ffffff transparent transparent;
+  border-style: solid;
+  border-width: 0.2em;
+  box-shadow: 0px 0px 0px 1px transparent;
+}
+.ui.labeled.icon.loading.button .icon {
+  background-color: transparent;
+  box-shadow: none;
+}
+@-webkit-keyframes button-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes button-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+/*-------------------
+      Disabled
+--------------------*/
+
+.ui.buttons .disabled.button,
+.ui.disabled.button,
+.ui.button:disabled,
+.ui.disabled.button:hover,
+.ui.disabled.active.button {
+  cursor: default;
+  opacity: 0.45 !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  pointer-events: none;
+}
+
+.ui.link .disabled.link, 
+.ui.disabled.link, 
+.ui.link[disabled],
+.ui.disabled.link:hover, 
+.ui.disabled.active.link {
+    cursor: default;
+    opacity: 0.45 !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    pointer-events: none;
+}
+
+
+/*******************************
+             Types
+*******************************/
+
+
+/*-------------------
+       Animated
+--------------------*/
+
+.ui.animated.button {
+  position: relative;
+  overflow: hidden;
+  padding-right: 0em !important;
+  vertical-align: middle;
+  z-index: 1;
+}
+.ui.animated.button .content {
+  will-change: transform, opacity;
+}
+.ui.animated.button .visible.content {
+  position: relative;
+  margin-right: 1.5em;
+}
+.ui.animated.button .hidden.content {
+  position: absolute;
+  width: 100%;
+}
+
+/* Horizontal */
+.ui.animated.button .visible.content,
+.ui.animated.button .hidden.content {
+  -webkit-transition: right 0.3s ease 0s;
+          transition: right 0.3s ease 0s;
+}
+.ui.animated.button .visible.content {
+  left: auto;
+  right: 0%;
+}
+.ui.animated.button .hidden.content {
+  top: 50%;
+  left: auto;
+  right: -100%;
+  margin-top: -0.5em;
+}
+.ui.animated.button:focus .visible.content,
+.ui.animated.button:hover .visible.content {
+  left: auto;
+  right: 200%;
+}
+.ui.animated.button:focus .hidden.content,
+.ui.animated.button:hover .hidden.content {
+  left: auto;
+  right: 0%;
+}
+
+/* Vertical */
+.ui.vertical.animated.button .visible.content,
+.ui.vertical.animated.button .hidden.content {
+  -webkit-transition: top 0.3s ease, -webkit-transform 0.3s ease;
+          transition: top 0.3s ease, transform 0.3s ease;
+}
+.ui.vertical.animated.button .visible.content {
+  -webkit-transform: translateY(0%);
+      -ms-transform: translateY(0%);
+          transform: translateY(0%);
+  right: auto;
+}
+.ui.vertical.animated.button .hidden.content {
+  top: -50%;
+  left: 0%;
+  right: auto;
+}
+.ui.vertical.animated.button:focus .visible.content,
+.ui.vertical.animated.button:hover .visible.content {
+  -webkit-transform: translateY(200%);
+      -ms-transform: translateY(200%);
+          transform: translateY(200%);
+  right: auto;
+}
+.ui.vertical.animated.button:focus .hidden.content,
+.ui.vertical.animated.button:hover .hidden.content {
+  top: 50%;
+  right: auto;
+}
+
+/* Fade */
+.ui.fade.animated.button .visible.content,
+.ui.fade.animated.button .hidden.content {
+  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+          transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.ui.fade.animated.button .visible.content {
+  left: auto;
+  right: auto;
+  opacity: 1;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+.ui.fade.animated.button .hidden.content {
+  opacity: 0;
+  left: 0%;
+  right: auto;
+  -webkit-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+          transform: scale(1.5);
+}
+.ui.fade.animated.button:focus .visible.content,
+.ui.fade.animated.button:hover .visible.content {
+  left: auto;
+  right: auto;
+  opacity: 0;
+  -webkit-transform: scale(0.75);
+      -ms-transform: scale(0.75);
+          transform: scale(0.75);
+}
+.ui.fade.animated.button:focus .hidden.content,
+.ui.fade.animated.button:hover .hidden.content {
+  left: 0%;
+  right: auto;
+  opacity: 1;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+/*-------------------
+    Labeled Button
+--------------------*/
+
+.ui.labeled.button:not(.icon) {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: none !important;
+  padding: 0px !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.ui.labeled.button > .button {
+  margin: 0px;
+}
+.ui.labeled.button > .label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px 0px 0px -1px !important;
+  padding: '';
+  font-size: 1em;
+  border-color: rgba(34, 36, 38, 0.15);
+}
+
+/* Tag */
+.ui.labeled.button > .tag.label:before {
+  width: 1.85em;
+  height: 1.85em;
+}
+
+/* Right */
+.ui.labeled.button:not([class*="left labeled"]) > .button {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.ui.labeled.button:not([class*="left labeled"]) > .label {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+/* Left Side */
+.ui[class*="left labeled"].button > .button {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.ui[class*="left labeled"].button > .label {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+/*-------------------
+       Social
+--------------------*/
+
+
+/* Facebook */
+.ui.facebook.button {
+  background-color: #3b5998;
+  color: #ffffff;
+  text-shadow: none;
+  background-image: none;
+  box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.ui.facebook.button:hover {
+  background-color: #304d8a;
+  color: #ffffff;
+  text-shadow: none;
+}
+.ui.facebook.button:active {
+  background-color: #2d4373;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* Twitter */
+.ui.twitter.button {
+  background-color: #0084b4;
+  color: #ffffff;
+  text-shadow: none;
+  background-image: none;
+  box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.ui.twitter.button:hover {
+  background-color: #00719b;
+  color: #ffffff;
+  text-shadow: none;
+}
+.ui.twitter.button:active {
+  background-color: #005f81;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* Google Plus */
+.ui.google.plus.button {
+  background-color: #dc4a38;
+  color: #ffffff;
+  text-shadow: none;
+  background-image: none;
+  box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.ui.google.plus.button:hover {
+  background-color: #de321d;
+  color: #ffffff;
+  text-shadow: none;
+}
+.ui.google.plus.button:active {
+  background-color: #bf3322;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* Linked In */
+.ui.linkedin.button {
+  background-color: #1f88be;
+  color: #ffffff;
+  text-shadow: none;
+}
+.ui.linkedin.button:hover {
+  background-color: #147baf;
+  color: #ffffff;
+  text-shadow: none;
+}
+.ui.linkedin.button:active {
+  background-color: #186992;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* YouTube */
+.ui.youtube.button {
+  background-color: #cc181e;
+  color: #ffffff;
+  text-shadow: none;
+  background-image: none;
+  box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.ui.youtube.button:hover {
+  background-color: #bd0d13;
+  color: #ffffff;
+  text-shadow: none;
+}
+.ui.youtube.button:active {
+  background-color: #9e1317;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* Instagram */
+.ui.instagram.button {
+  background-color: #49769c;
+  color: #ffffff;
+  text-shadow: none;
+  background-image: none;
+  box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.ui.instagram.button:hover {
+  background-color: #3d698e;
+  color: #ffffff;
+  text-shadow: none;
+}
+.ui.instagram.button:active {
+  background-color: #395c79;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* Pinterest */
+.ui.pinterest.button {
+  background-color: #00aced;
+  color: #ffffff;
+  text-shadow: none;
+  background-image: none;
+  box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.ui.pinterest.button:hover {
+  background-color: #0099d4;
+  color: #ffffff;
+  text-shadow: none;
+}
+.ui.pinterest.button:active {
+  background-color: #0087ba;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* VK */
+.ui.vk.button {
+  background-color: #4D7198;
+  color: #ffffff;
+  background-image: none;
+  box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.ui.vk.button:hover {
+  background-color: #41648a;
+  color: #ffffff;
+}
+.ui.vk.button:active {
+  background-color: #3c5876;
+  color: #ffffff;
+}
+
+/*--------------
+     Icon
+---------------*/
+
+.ui.button > .icon:not(.button) {
+  height: 0.85714286em;
+  opacity: 0.8;
+  margin: 0em 0.42857143em 0em -0.21428571em;
+  -webkit-transition: opacity 0.1s ease;
+          transition: opacity 0.1s ease;
+  vertical-align: '';
+  color: '';
+}
+.ui.button > .right.icon:not(.button) {
+  margin: 0em -0.21428571em 0em 0.42857143em;
+}
+
+
+/*******************************
+           Variations
+*******************************/
+
+
+/*-------------------
+       Floated
+--------------------*/
+
+.ui[class*="left floated"].buttons,
+.ui[class*="left floated"].button {
+  float: left;
+  margin-left: 0em;
+  margin-right: 0.25em;
+}
+.ui[class*="right floated"].buttons,
+.ui[class*="right floated"].button {
+  float: right;
+  margin-right: 0em;
+  margin-left: 0.25em;
+}
+
+/*-------------------
+       Compact
+--------------------*/
+
+.ui.compact.buttons .button,
+.ui.compact.button {
+  padding: 0.58928571em 1.125em 0.58928571em;
+}
+.ui.compact.icon.buttons .button,
+.ui.compact.icon.button {
+  padding: 0.58928571em 0.58928571em 0.58928571em;
+}
+.ui.compact.labeled.icon.buttons .button,
+.ui.compact.labeled.icon.button {
+  padding: 0.58928571em 3.69642857em 0.58928571em;
+}
+
+/*-------------------
+        Sizes
+--------------------*/
+
+.ui.mini.buttons .button,
+.ui.mini.buttons .or,
+.ui.mini.button {
+  font-size: 0.71428571rem;
+}
+.ui.tiny.buttons .button,
+.ui.tiny.buttons .or,
+.ui.tiny.button {
+  font-size: 0.85714286rem;
+}
+.ui.small.buttons .button,
+.ui.small.buttons .or,
+.ui.small.button {
+  font-size: 0.92857143rem;
+}
+.ui.buttons .button,
+.ui.buttons .or,
+.ui.button {
+  font-size: 0.875em;
+}
+.ui.large.buttons .button,
+.ui.large.buttons .or,
+.ui.large.button {
+  font-size: 1.14285714rem;
+}
+.ui.big.buttons .button,
+.ui.big.buttons .or,
+.ui.big.button {
+  font-size: 1.28571429rem;
+}
+.ui.huge.buttons .button,
+.ui.huge.buttons .or,
+.ui.huge.button {
+  font-size: 1.42857143rem;
+}
+.ui.massive.buttons .button,
+.ui.massive.buttons .or,
+.ui.massive.button {
+  font-size: 1.71428571rem;
+}
+
+/*******************************
+            Groups
+*******************************/
+
+.ui.buttons {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 0em;
+  vertical-align: baseline;
+  margin: 0em 0.25em 0em 0em;
+}
+
+/* Clearfix */
+.ui.buttons:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* Standard Group */
+.ui.buttons .button {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  margin: 0em;
+  border-radius: 0em;
+  margin: 0px 0px 0px 0px;
+}
+.ui.buttons .button:first-child {
+  border-left: none;
+  margin-left: 0em;
+  border-top-left-radius: 0.28571429rem;
+  border-bottom-left-radius: 0.28571429rem;
+}
+.ui.buttons .button:last-child {
+  border-top-right-radius: 0.28571429rem;
+  border-bottom-right-radius: 0.28571429rem;
+}
+
+
+/*-------------------
+       Colors
+--------------------*/
+
+
+/*--- Primary ---*/
+
+.ui.primary-btn.button {
+  background-color: #2263A0;
+  color: #ffffff;
+  text-shadow: none;
+  background-image: none;
+}
+.ui.primary-btn.button {
+  box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.ui.inverted.primary-btn.button {
+  border: 0;
+}
+.ui.primary-btn.button:hover {
+  background-color: #2A7FCE;
+  color: #ffffff;
+  text-shadow: none;
+}
+.ui.primary-btn.button:focus {
+  background-color: #104578;
+  color: #ffffff;
+  text-shadow: none;
+}
+.ui.primary-btn.button:active {
+  background-color: #104578;
+  color: #ffffff;
+  text-shadow: none;
+}
+.ui.primary-btn.active.button,
+.ui.primary-btn.button .active.button:active {
+  background-color: #104578;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+
+/* Secondary Button */
+
+.ui.secondary-btn.button {
+  background-color: #ffffff;
+  color: #2878b0;
+  text-shadow: none;
+  background-image: none;
+  border: 1px solid #cccccc;
+}
+.ui.secondary-btn.button {
+  box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.ui.inverted.secondary-btn.button {
+  border: 0;
+}
+.ui.secondary-btn.button:hover {
+  background-color: #ffffff;
+  color: #3392d7;
+  text-shadow: none;
+}
+.ui.secondary-btn.button:focus {
+  background-color: #ffffff;
+  color: #0f578a;
+  text-shadow: none;
+}
+.ui.secondary-btn.button:active {
+  background-color: #ffffff;
+  color: #0f578a;
+  text-shadow: none;
+}
+.ui.secondary-btn.active.button,
+.ui.secondary-btn.button .active.button:active {
+  background-color: #ffffff;
+  color: #0f578a;
+  text-shadow: none;
+}
+
+/* Store Static Button */
+
+.ui.store-static-btn.button {
+  background-color: #f7a43e;
+  color: #ffffff;
+  text-shadow: none;
+  background-image: none;
+}
+.ui.store-static-btn.button {
+  box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.ui.store-static-btn.button:hover {
+  background-color: #ffbd3e;
+  color: #ffffff;
+  text-shadow: none;
+}
+.ui.store-static-btn.button:focus {
+  background-color: #ea8d19;
+  color: #ffffff;
+  text-shadow: none;
+}
+.ui.store-static-btn.button:active {
+  background-color: #ea8d19;
+  color: #ffffff;
+  text-shadow: none;
+}
+.ui.store-static-btn.active.button,
+.ui.store-static-btn.button .active.button:active {
+  background-color: #ea8d19;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* Primary Static Link  */
+
+.ui.primary-link.links .link,
+.ui.primary-link.link {
+  color: #2878b0;
+  text-shadow: none;
+}
+.ui.primary-link.link {
+  box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.ui.primary-link.link:hover {
+  color: #3392d7;
+  text-shadow: none;
+}
+.ui.primary-link.link:focus {
+  color: #3392d7;
+  text-shadow: none;
+}
+
+/* Secondary Static Link  */
+
+.ui.secondary-link.link {
+  color: #3c3c3c;
+  text-shadow: none;
+}
+.ui.secondary-link.link {
+  box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.ui.secondary-link.link:hover {
+  color: #2878b0;
+  text-shadow: none;
+}
+.ui.secondary-link.link:focus {
+  color: #3392d7;
+  text-shadow: none;
+}

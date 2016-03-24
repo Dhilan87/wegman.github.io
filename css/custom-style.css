@@ -1,0 +1,96 @@
+body {
+	font-size: 16px;
+}
+.bs-callout {
+	background-color: rgba(27, 128, 158, 0.04);
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #A8DCEB;
+    border-left-width: 5px;
+    border-radius: 3px;
+}
+
+.navbar-brand {
+    float: left;
+    padding: 10px 15px 0;
+    font-size: 19px;
+    line-height: 21px;
+    width: 150px;
+}
+
+.navbar-brand img {
+	width: 100%;
+}
+
+.bs-callout-info {
+    border-left-color: #1b809e;
+}
+
+.top-banner-text {
+	background-color: #00838F;
+	padding: 50px 50px 60px 50px;
+	margin-bottom: 50px;
+}
+
+.top-banner-text .title {
+	font-size: 62px;
+	color: #fff;
+}
+.top-banner-text .sub-title {
+	font-size: 18px;
+	color: #fff;
+}
+
+.bs-sidebar {
+	background-color: #00838F;
+}
+
+.bs-sidebar .nav a {
+	color: #fff;
+}
+
+.bs-sidebar .nav > .active > a, .bs-sidebar .nav > .active:hover > a, .bs-sidebar .nav > .active:focus > a {
+	background-color: #0694A1;
+}
+
+.nav>li>a:hover, .nav>li>a:focus {
+	background-color: #0694A1;	
+}
+
+.sec-sub-title {
+	color: #00838F;
+	font-size: 24px;
+	font-weight: 400;
+	margin-bottom: 20px;
+	margin-top: 40px;
+}
+
+code {
+    padding: 1px 3px;
+    background: rgb(236, 240, 241);
+    border: solid 1px #ccc;
+    color: #3E3E3E;
+}
+
+.ui.form {
+	font-size: 16px !important;
+}
+
+.ui.breadcrumb {
+	background-color: #fff;
+	font-size: 16px !important;
+}
+
+pre {
+    display: block;
+    padding: 10px;
+    margin: 0 0 30.5px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #7b8a8b;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #ecf0f1;
+    border: 1px solid #ccc;
+    border-radius: 0 0 4px 4px;
+}
